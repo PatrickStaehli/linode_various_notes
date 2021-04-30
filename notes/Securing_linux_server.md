@@ -13,7 +13,7 @@ Anyway, in my particular case, the pros seem to outweigh the cons.
 
 #### Configuration
 ```
-sudo apt-get install unattended-upgrades
+sudo apt install unattended-upgrades
 sudo dpkg-reconfigure --priority=low unattended-upgrades
 ```
 
@@ -72,8 +72,8 @@ A server that gets spammed with unsuccessful logins indicates attempted maliciou
 
 #### Installation
 ```
-sudo apt-get update && apt-get upgrade -y
-sudo apt-get install fail2ban
+sudo apt update && apt upgrade -y
+sudo apt install fail2ban
 ```
 Allow SSH access through UFW and then enable the firewall:
 ```
