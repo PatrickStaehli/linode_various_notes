@@ -28,11 +28,16 @@ adduser <example_user> sudo
 Disconnect  ```exit``` and log back in as the new user: ```ssh <example_user>@<your_ip>```
 
 ## #3: Harden SSH Access
-Password authentication to connect via SSH is used by default. This password, however, might be hacked via brute-force. A cryptographic key-pair is much more difficult to brute-force and is therefore more secure. 
-In the following, a authentication key-pair is generated under windows 10.
+Password authentication to connect via SSH is used by default. This password, however, might be hacked via brute-force. A cryptographic key-pair is much more difficult to brute-force and is therefore more secure. If you want to know more about Public Key Cryptograpy these videos will give you an excellent overview 
+- [Secret Key Exchange (Diffie-Hellman) - Computerphile](https://www.youtube.com/watch?v=NmM9HA2MQGI)
+- [Diffie Hellman - the Mathematics bit- Computerphile](https://www.youtube.com/watch?v=Yjrfm_oRO0w&t=321s)
+- [Public Key Cryptography - Computerphile](https://www.youtube.com/watch?v=GSIDS_lvRv4) 
+
+In the following, a authentication key-pair is generated under Windows 10. If you are using a Linux system, the steps are exactely the same.
 
 **Linode**
-We first create a directory where the public-key is located.
+If there exits no ~/.ssh directory yet, we have to create it. In this directory (more exactely in a subdirectory, see later), all public-keys are located.
+
 ```
 mkdir -p ~/.ssh && sudo chmod -R 700 ~/.ssh/
 ```
